@@ -1,0 +1,26 @@
+<section class="search-section">
+    <label for="country">Country:</label>
+    <select id="country">
+        <option value="">Select Country</option>
+        <option value="ZW">Zimbabwe</option>
+        <option value="MW">Malawi</option>
+        <option value="ZM">Zambia</option>
+    </select>
+
+    <label for="pageSize">Records per page:</label>
+    <select id="pageSize">
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+    </select>
+
+    <label for="page">Page:</label>
+    <input type="number" id="page" value="1" min="1">
+
+    <button onclick="searchPayoutPartners()">Search</button>
+    <div id="error" class="error-message"></div>
+</section>
+
+<section class="results-section">
+    <div id="results"></div>
+</section>

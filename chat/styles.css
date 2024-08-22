@@ -1,0 +1,29 @@
+.search-section {
+    margin-bottom: 20px;
+}
+
+#country,
+#pageSize,
+#page {
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.results-section {
+    margin-top: 20px;
+}
+
+.partner {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
