@@ -1,4 +1,3 @@
-/* Reset some basic styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,14 +5,12 @@
     font-family: Arial, sans-serif;
 }
 
-/* Body styling */
 body,
 html {
     height: 100%;
     overflow: hidden;
 }
 
-/* Video styling */
 #video2 {
     position: absolute;
     top: 50%;
@@ -25,6 +22,7 @@ html {
     z-index: -1;
     transform: translate(-50%, -50%);
 }
+
 
 @keyframes flash {
 
@@ -40,11 +38,13 @@ html {
 
 #blinking_image {
     animation: flash 1s infinite;
-    width: 800px;
-    height: 400px;
+    width: 20%;
+    height: 25%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }
 
-/* Content styling */
 .content {
     position: relative;
     z-index: 1;
@@ -58,158 +58,57 @@ html {
     padding: 20px;
 }
 
-/* Adjust h1 to be at the top of the page and centered horizontally */
 h1 {
     font-size: 100px;
     width: 100%;
     text-align: center;
     position: absolute;
     top: 0;
-    padding: 20px 0;
+    padding-top: 370px;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Optional: Add a semi-transparent background */
 }
 
-/* Paragraph styling */
 p {
     font-size: 24px;
 }
 
-.form-container {
+.button-group {
     display: flex;
-    gap: 20px;
-    flex-direction: column;
-    align-items: center;
+    gap: 140px;
+    padding-top: 41%;
+   
 }
 
-/* Form wrapper styling */
-.form-wrapper {
-    background: white;
-    /* Semi-transparent background */
-    border-radius: 8px;
-    padding: 20px;
-    width: 300px;
-    box-shadow: white;
-}
-
-h2 {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
+.button {
+    padding: 30px 60px;
     border: none;
-    border-radius: 4px;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    background: #007bff;
+    border-radius: 175px;
+    font-size: 48px;
+    font-weight: bold;
     color: white;
-    font-size: 16px;
+    background-color:#FF4500;
     cursor: pointer;
-}
-
-button:hover {
-    background: #0056b3;
-}
-
-
-
-/* body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden;
-}
-
-#background_video {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    transform: translate(-50%, -50%);
-    background: no-repeat;
-    background-size: cover;
+    transition: all 0.3s ease;
+    width: 880px;
+    height: 150px;
 }
 
 
 
-#blinking_image {
-    /* animation: flash 1s 1; Runs the animation for 1 second, only once */
-    /* position: relative;
-    z-index: 1; 
-    margin-top: 20px; 
-    width: 200px; 
-    height: 200px; 
-    left: 50%;
-    transform: translateX(-50%);  */
-/* } */ */
-
-/* @keyframes flash {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-} */
-
-/* h1 {
-    color: white;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-    font-size: 50px;
-    /* top: 50%; */
-    /* transform: translateY(-50%);
-    margin-top: 35px;
-
+.button.fast {
+    background-color: #ffffff;
+    color: #FF4500;
+    border: 6px solid #FF4500;
 }
 
-#app {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-} */
+.button:hover {
+    transform: translateY(-9px);
+}
 
-/* header {
-    text-align: center;
-    padding: 10px 0;
-} */
-/* 
-#search {
-    margin: 20px 0;
-} */
+.button.reverse:hover {
+    background-color: #FF4500;
+}
 
-/* #results {
-    margin: 20px 0;
-} */ */
-
-/* /* #locationList {
-    list-style-type: none;
-    padding: 0;
-} */
-
-/* #locationList li {
-    padding: 10px;
-    background: #eee;
-    margin-bottom: 10px;} */
+.button.fast:hover {
+    background-color: #f0f0f0;
+}
