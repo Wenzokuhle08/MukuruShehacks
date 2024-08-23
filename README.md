@@ -1,4 +1,4 @@
-SheHacks
+#SheHacks
 
 Project title
 
@@ -29,7 +29,12 @@ Help
 
 Authors
 
-Masego Kaudi - kaudimasego7@gmail.com Mpho Zethu Maite Wenzokuhle Lerato
+Masego Kaudi - kaudimasego7@gmail.com 
+Mpho Cindi - cindimpho3@gmail.com
+Zethu Nkosi - zethu1490@gmail.com 
+Maite 
+Wenzokuhle Maziya - wnmaziya08@gmail.com 
+Lerato
 
 Version History
 
