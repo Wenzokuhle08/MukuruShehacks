@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay-out finder</title>
+    <link rel="stylesheet" href="MukuruShehacks-mainMpho/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</head>
+<body>
+    <video autoplay muted loop id="background_video">
+        <source src="istockphoto-1479538228-640_adpp_is.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <img src="mukuru.png" alt='blinking!' id='blinking_image'>
+    <h1>Where Borders Disappear, Connections Grow</h1>
+    <div id="app">
+    
+            <section id="search">
+                <label for="country">Select Country:</label>
+                <select id="country">
+                    <option value="ZW">Zimbabwe</option>
+                    <option value="MW">Malawi</option>
+                    <option value="ZM">Zambia</option>
+                    <option value="ZA">South Africa</option>
+                </select>
+                <button id="searchButton">Find Locations</button>
+            </section>
+            <section id="results">
+                <h2>Available Locations</h2>
+                <ul id="locationList"></ul>
+                <div id="map"></div>
+            </section>
+        
+    </div>
+
+</body>
+<script>
+    // Initialize the map
+    var map = L.map('map').setView([-17.824858, 31.053028], 5); // Default center (Zimbabwe)
+
+    // Add a tile layer to the map (this is from OpenStreetMap)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Sample locations (You can replace these with actual data)
+    var locations = {
+        ZW: [
+            { name: "Harare", lat: -17.824858, lng: 31.053028 },
+            { name: "Bulawayo", lat: -20.132039, lng: 28.626479 }
+        ],
+        MW: [
+            { name: "Lilongwe", lat: -13.963656, lng: 33.774119 },
+            { name: "Blantyre", lat: -15.784930, lng: 35.008458 }
+        ],
+        ZM: [
+            { name: "Lusaka", lat: -15.387526, lng: 28.322817 },
+            { name: "Ndola", lat: -12.958667, lng: 28.636590 }
+        ]
+    };
+
+    // Update map based on selected country
+    document.getElementById('searchButton').addEventListener('click', function() {
+        var country = document.getElementById('country').value;
+        var countryLocations = locations[country];
+
+        // Clear previous markers
+        map.eachLayer(function (layer) {
+            if (!!layer.toGeoJSON) {
+                map.removeLayer(layer);
+            }
+        });
+
+        // Add markers for the selected country
+        countryLocations.forEach(function(location) {
+            L.marker([location.lat, location.lng])
+                .addTo(map)
+                .bindPopup(location.name)
+                .openPopup();
+        });
+
+        // Adjust map view to fit the markers
+        var bounds = L.latLngBounds(countryLocations.map(loc => [loc.lat, loc.lng]));
+        map.fitBounds(bounds);
+    });
+</script>
+
+</html>
