@@ -4,26 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Mukuru Login page</title>
+    <title>Mukuru Login Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <video autoplay muted loop id="video2">
-        <source src="video2.mp4" type="video/mp4">
-    </video>
+    <div class="video-container">
+        <video autoplay muted loop id="video2">
+            <source src="video2.mp4" type="video/mp4">
+        </video>
+    </div>
 
     <div class="content">
-        <img src="mukuru.png" alt='blinking!' id='blinking_image'>
+        <div class="logo-container">
+            <img src="mukuru.png" alt="blinking!" id="blinking_image">
+        </div>
+        <div class="text-container">
             <h1>Where Borders Disappear and Connections Grow</h1>
+        </div>
 
-    <div class="button-group">
-        <!-- <button class="button">Sign Up</button> -->
-        <!-- <button class="button " onclick="window.location.href='sign-up.html'">Sign up</button> -->
-        <button class="button reverse" onclick="window.location.href='login.html'">Login</button>
+        <div class="button-group">
+            <!-- <button class="button" onclick="window.location.href='sign-up.html'">Sign Up</button> -->
+            <button class="button reverse" onclick="window.location.href='login.html'">Login</button>
+        </div>
     </div>
-    </div>
-
 </body>
 
 </html>

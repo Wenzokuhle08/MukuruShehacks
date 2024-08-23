@@ -11,6 +11,16 @@ html {
     overflow: hidden;
 }
 
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
 #video2 {
     position: absolute;
     top: 50%;
@@ -19,30 +29,30 @@ html {
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -1;
     transform: translate(-50%, -50%);
 }
 
-
 @keyframes flash {
-
-    0%,
-    100% {
+    0%, 100% {
         opacity: 1;
     }
-
     50% {
         opacity: 0;
     }
 }
 
-#blinking_image {
-    animation: flash 1s infinite;
-    width: 20%;
-    height: 25%;
+.logo-container {
     position: absolute;
     top: 20px;
     left: 20px;
+    width: 20%;
+    height: 25%;
+}
+
+#blinking_image {
+   
+    width: 100%;
+    height: 100%;
 }
 
 .content {
@@ -58,57 +68,51 @@ html {
     padding: 20px;
 }
 
-h1 {
-    font-size: 100px;
+.text-container {
     width: 100%;
-    text-align: center;
-    position: absolute;
-    top: 0;
-    padding-top: 370px;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
-p {
-    font-size: 24px;
+h1 {
+    font-size: 4vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    padding: 20px;
 }
 
 .button-group {
     display: flex;
-    gap: 140px;
-    padding-top: 41%;
-   
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+    width: 100%;
 }
 
 .button {
-    padding: 30px 60px;
+    padding: 20px 40px;
     border: none;
-    border-radius: 175px;
-    font-size: 48px;
+    border-radius: 50px;
+    font-size: 24px;
     font-weight: bold;
     color: white;
-    background-color:#FF4500;
+    background-color: #FF4500;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 880px;
-    height: 150px;
+    width: 80%;
+    max-width: 300px;
 }
 
-
-
-.button.fast {
+.button.reverse {
     background-color: #ffffff;
     color: #FF4500;
-    border: 6px solid #FF4500;
+    border: 2px solid #FF4500;
 }
 
 .button:hover {
-    transform: translateY(-9px);
+    transform: translateY(-5px);
 }
 
 .button.reverse:hover {
     background-color: #FF4500;
-}
-
-.button.fast:hover {
-    background-color: #f0f0f0;
+    color: white;
 }
